@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HEIGMail</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="index.js" type="module" defer></script>
+    <link rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <a id="logo" href="/">
+        <img src="images/logo_heigmail.png" />
+      </a>
+    </header>
+
+    <main>
+      <!-- ajouter la classe "active" à une section pour l'afficher -->
+      <!-- exemple : <section id="dashboard-section" class="active"> -->
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <!-- Pas besoin de toucher à cette section, juste là pour l'UI -->
+      <section id="dashboard-section" class="active">
+        <h4>Dashboard</h4>
+        <div class="dashboard-list">
+          <div class="dashboard-list-item">
+            <span>4</span>
+            mails non-lus
+          </div>
+          <div class="dashboard-list-item">
+            <span>7</span>
+            mails aujourd'hui
+          </div>
+          <div class="dashboard-list-item">
+            <span>23</span>
+            cette semaine
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="emails-section">
+        <h4>Dossiers > HEIG-VD</h4>
+
+        <ul class="emails-list"></ul>
+
+        <template id="emails-list-item-template">
+          <li>
+            <div class="emails-list-item-actions">
+              <!-- le plus simple est d'utiliser .starred-button comme querySelector pour le sélectionner -->
+              <button type="button" class="icon-button starred-button">
+                <!-- utiliser "star" pour la version pleine -->
+                <span class="material-icons">star_outlined</span>
+              </button>
+            </div>
+
+            <a href="#">
+              <div class="emails-list-item-from">webmobui@heig-vd.ch</div>
+              <div class="emails-list-item-subject">Examen Webmobui</div>
+              <div class="emails-list-item-date">27 mars 2023</div>
+            </a>
+          </li>
+        </template>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="folders-section">
+        <h4>Dossiers</h4>
+
+        <div class="folders-list"></div>
+
+        <template id="folders-list-item-template">
+          <a href="#">
+            <div class="folders-list-item-name">HEIG-VD</div>
+            <!-- penser à garder l'écriture "[count] éléments" -->
+            <div class="folders-list-item-count">2 éléments</div>
+          </a>
+        </template>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="email-details-section">
+        <h4>Examen Webmobui</h4>
+        <h6>info@heig-vd.ch</h6>
+        <b>27 février 2023</b>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+          elit maximus, consequat velit vitae, laoreet felis. Morbi commodo
+          vitae dolor nec scelerisque. Maecenas non urna orci.
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="#dashboard" class="active">
+          <span class="material-icons">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#inbox">
+          <span class="material-icons">all_inbox</span>
+          <span>Inbox</span>
+        </a>
+        <a href="#folders">
+          <span class="material-icons">folder_open</span>
+          <span>Dossiers</span>
+        </a>
+        <a href="#starred">
+          <span class="material-icons">star</span>
+          <span>Importants</span>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

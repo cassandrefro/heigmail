@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #0474ff;
+  --primary-color-dark: #002450;
+  --secondary-color: #181818;
+  --bg-color: #f6f8fc;
+  --text-color: #202124;
+  --border-color: #272727;
+  --grey-accent: #dbdbdb;
+  --grey: #999;
+  --gold: #ffab00;
+  --border-radius: 10px;
+  --default-transition: 300ms ease-in-out;
+}
+
+body.offline {
+  --primary-color: #ff0000;
+  --primary-color-dark: #880000;
+}
